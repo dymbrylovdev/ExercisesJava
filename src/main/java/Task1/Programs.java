@@ -9,14 +9,21 @@ package main.java.Task1;
 //        печать в консоль. Например: dogBobik.run(150); -> 'Бобик пробежал 150 м'.
 
 
+import main.java.Task1.Animals.Animal;
 import main.java.Task1.Animals.Cat;
+import main.java.Task1.Animals.Dog;
 
 public class Programs {
 
     public static void main(String[] args) {
-        Cat cat1 = new Cat(100,222, "Снежок");
-        cat1.setRun(200);
-        cat1.getRun();
+        Animal[] animals =  {
+                new Cat("Снежок",200),
+                new Dog("Шарик", 500, 10)
+        };
+        for (Animal a : animals){
+            a.run(1000);
+            a.swim(100);
+        }
     }
 }
 
